@@ -9,96 +9,204 @@ const App: React.FC = () => {
   const handleSeasonChange = (newSeason: string) => {
     setIsContentTransitioning(true);
     setTimeout(() => {
-      setSelectedSeason(newSeason);
+      setSelectedSeason([newSeason]);
       setShowSeasonDropdown(false);
       setIsContentTransitioning(false);
     }, 300);
   };
-  const awardsData = {
+  // Define the type for a square object
+  interface Square {
+    id: number;
+    color: string;
+    name: string;
+    wins: number;
+    losses: number;
+    draws: number;
+    power_ups: number;
+    damage_done: number;
+    wall_bounces: number;
+    image: string;
+  }
+
+  interface Champion {
+    name: string,
+    color: string,
+    record: string,
+    damageDone: string,
+    powerUps: string,
+    wallBounces: string,
+    image: string,
+  }
+
+  interface Mvp {
+    name: string,
+    color: string,
+    record: string,
+    damageDone: string,
+    powerUps: string,
+    wallBounces: string,
+    image: string,
+  }
+
+  interface Rookie {
+    name: string,
+    color: string,
+    record: string,
+    damageDone: string,
+    powerUps: string,
+    wallBounces: string,
+    image: string,
+  }
+
+  interface AllSquare {
+    name: string,
+    color: string,
+    record: string,
+    image: string
+  }
+
+  interface MostAggressive {
+    name: string,
+    color: string,
+    damageDone: string,
+    damageDonePerGame: string,
+    image: string
+  }
+  interface MostTactical {
+    name: string,
+    color: string,
+    powerUps: string,
+    powerUpsPerGame: string,
+    image: string
+  }
+  interface MostNimble {
+    name: string,
+    color: string,
+    wallBounces: string,
+    wallBouncesPerGame: string,
+    image: string
+  }
+
+  interface GameHigh {
+    category: string
+    square: string,
+    value: string,
+    week: string
+  }
+// Define the type for season data
+interface SeasonData {
+  [key: string]: {
+    squares: Square[];
+  };
+}
+
+interface AwardsData {
+  [key: string]: {
+    champion: Champion,
+    mvp: Mvp,
+    rookie: Rookie,
+    allSquareTeam: AllSquare[],
+    mostAggressive: MostAggressive,
+    mostTactical: MostTactical,
+    mostNimble: MostNimble,
+    singleGameHighs: GameHigh[];
+  };
+}
+
+  const awardsData: AwardsData = {
     [season1]: {
       champion: {
         name: "Yellow",
         color: "yellow",
         record: "5-2",
-        championships: 2,
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
         image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500"
       },
       mvp: {
         name: "Not Awarded",
         color: "none",
-        avgPoints: 28.5,
-        efficiency: 96.8,
+        record: "0-0-0",
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
+        image: noImage
       },
       rookie: {
         name: "Not Awarded",
         color: "none",
-        rookiePoints: 22.3,
-        games: 34,
+        record: "0-0-0",
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
+        image: noImage
       },
       allSquareTeam: [
         {
           name: "Not Awarded",
-        color: "none",
-          position: "Center",
-          rating: 98,
-        },
-        { name: "Azure Ace", color: "blue", position: "Forward", rating: 96 },
-        {
-          name: "Not Awarded",
-        color: "none",
-          position: "Guard",
-          rating: 95,
+          color: "none",
+          record: "0-0-0",
+          image: noImage
         },
         {
           name: "Not Awarded",
-        color: "none",
-          position: "Forward",
-          rating: 94,
+          color: "none",
+          record: "0-0-0",
+          image: noImage  
+        },
+        {
+          name: "Not Awarded",
+          color: "none",
+          record: "0-0-0",
+          image: noImage},
+        {
+          name: "Not Awarded",
+          color: "none",
+          record: "0-0-0",
+          image: noImage  
         },
       ],
       mostAggressive: {
         name: "Not Awarded",
         color: "none",
-        attackScore: 98.5,
-        rushMoves: 156,
+        damageDone: "0",
+        damageDonePerGame: "0",
+        image: noImage
       },
       mostTactical: {
         name: "Not Awarded",
         color: "none",
-        strategyRating: 95.2,
-        tacticalPlays: 243,
+        powerUps: "0",
+        powerUpsPerGame: "0",
+        image: noImage
       },
       mostNimble: {
-        nname: "Not Awarded",
+        name: "Not Awarded",
         color: "none",
-        agilityScore: 97.8,
-        quickMoves: 312,
+        wallBounces: "0",
+        wallBouncesPerGame: "0",
+        image: noImage
       },
       singleGameHighs: [
         {
-          category: "Most Points",
-          player: "Not Awarded",
-          value: "45 pts",
-          date: "March 5, 2025",
+          category: "Most Damage Done",
+          square: "None",
+          value: "0",
+          week: "Week #0",
         },
         {
-          category: "Most Assists",
-          player: "Not Awarded",
-          value: "18 ast",
-          date: "February 28, 2025",
+          category: "Most Power Ups",
+          square: "None",
+          value: "0",
+          week: "Week #0",
         },
         {
-          category: "Most Blocks",
-          player: "Not Awarded",
-          value: "12 blk",
-          date: "March 1, 2025",
-        },
-        {
-          category: "Fastest Move",
-          player: "Not Awarded",
-          value: "0.8 sec",
-          date: "March 10, 2025",
-        },
+          category: "Most Wall Bounces",
+          square: "None",
+          value: "0",
+          week: "Week #0",
+        }
       ],
     },
     [season2]: {
@@ -126,28 +234,33 @@ const App: React.FC = () => {
         record: "11-3-1",
         damageDone: "38",
         powerUps: "23.2",
-        wallBounces: "127.2", 
+        wallBounces: "127.2",
         image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500"
       },
       allSquareTeam: [
-        { name: "Azure Ace", color: "blue", position: "Center", rating: 97 },
         {
-          name: "Emerald Elite",
-          color: "green",
-          position: "Forward",
-          rating: 95,
-        },
-        {
-          name: "Crimson Crusher",
-          color: "red",
-          position: "Guard",
-          rating: 94,
-        },
-        {
-          name: "Solar Striker",
+          name: "Yellow",
           color: "yellow",
-          position: "Forward",
-          rating: 93,
+          record: "10-5",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500"
+        },
+        {
+          name: "Green",
+          color: "green",
+          record: "8-7",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500"
+        },
+        {
+          name: "Arctic",
+          color: "arctic",
+          record: "9-6",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500"
+        },
+        {
+          name: "Crimson",
+          color: "crimson",
+          record: "11-3-1",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500"
         },
       ],
       mostAggressive: {
@@ -173,29 +286,23 @@ const App: React.FC = () => {
       },
       singleGameHighs: [
         {
-          category: "Most Points",
-          player: "Azure Ace",
-          value: "42 pts",
-          date: "April 15, 2024",
+          category: "Most Damage Done",
+          square: "Goldenrod",
+          value: "63",
+          week: "Week #4",
         },
         {
-          category: "Most Assists",
-          player: "Emerald Elite",
-          value: "16 ast",
-          date: "March 28, 2024",
+          category: "Most Power Ups",
+          square: "White",
+          value: "79",
+          week: "Week #9",
         },
         {
-          category: "Most Blocks",
-          player: "Crimson Crusher",
-          value: "11 blk",
-          date: "April 1, 2024",
-        },
-        {
-          category: "Fastest Move",
-          player: "Solar Striker",
-          value: "0.85 sec",
-          date: "March 20, 2024",
-        },
+          category: "Most Wall Bounces",
+          square: "Green",
+          value: "683",
+          week: "Week #10",
+        }
       ],
     }
   };
@@ -204,7 +311,7 @@ const App: React.FC = () => {
   const [showColorDropdown, setShowColorDropdown] = useState(false);
   const [activePage, setActivePage] = useState("home");
   const [selectedSquare, setSelectedSquare] = useState<string | null>(null);
-  const seasonData = {
+  const seasonData: SeasonData = {
     [season1]: {
       squares: [
         { id: 1, color: "red", name: "Red", wins: 3, losses: 4, draws: 0, power_ups: 36, damage_done: 329, wall_bounces: 135, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
@@ -238,37 +345,8 @@ const App: React.FC = () => {
       ],
     }
   };
-  const [selectedDate, setSelectedDate] = useState(
-    new Date().toISOString().split("T")[0],
-  );
   const [selectedWeekNumber, setSelectedWeekNumber] = useState(1);
   const [showWeekDropdown, setShowWeekDropdown] = useState(false);
-  const matches = [
-    {
-      date: new Date().toISOString().split("T")[0],
-      time: "14:00",
-      team1: { id: 1, name: "Crimson Crusher", color: "red" },
-      team2: { id: 2, name: "Azure Ace", color: "blue" },
-      venue: "YouTube",
-      expectedAttendance: "15,000",
-    },
-    {
-      date: new Date().toISOString().split("T")[0],
-      time: "16:30",
-      team1: { id: 3, name: "Emerald Elite", color: "green" },
-      team2: { id: 4, name: "Solar Striker", color: "yellow" },
-      venue: "Geometric Stadium",
-      expectedAttendance: "12,500",
-    },
-    {
-      date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-      time: "15:00",
-      team1: { id: 5, name: "Royal Ruler", color: "purple" },
-      team2: { id: 6, name: "Ruby Racer", color: "red" },
-      venue: "Square Garden",
-      expectedAttendance: "13,800",
-    },
-  ];
   const [showSquareProfile, setShowSquareProfile] = useState(false);
   const seasons = [season1, season2];
   const colors = ["all", "red", "blue", "green", "yellow", "purple"];
@@ -334,14 +412,14 @@ const App: React.FC = () => {
                   <div
                     key={season}
                     onClick={() => handleSeasonChange(season)}
-                    className={`px-4 py-2 hover:bg-gray-100 cursor-pointer transition-all duration-300 ${selectedSeason === season
+                    className={`px-4 py-2 hover:bg-gray-100 cursor-pointer transition-all duration-300 ${selectedSeason.includes(season)
                       ? "bg-blue-50 text-blue-600 font-medium"
                       : ""
                       }`}
                   >
                     <div className="flex items-center justify-between">
                       <span>{season}</span>
-                      {selectedSeason === season && (
+                      {selectedSeason.includes(season) && (
                         <i className="fas fa-check text-blue-600 ml-2"></i>
                       )}
                     </div>
@@ -604,11 +682,11 @@ const App: React.FC = () => {
       </div>
     );
   };
-  const filterSquares = (squares: any[]) => {
-    const currentSeasonSquares = seasonData[selectedSeason].squares;
+  const filterSquares = () => {
+    const currentSeasonSquares = seasonData[selectedSeason[0]].squares;
     if (selectedColor === "all") return currentSeasonSquares;
     return currentSeasonSquares.filter(
-      (square) => square.color === selectedColor,
+      (square: Square) => square.color === selectedColor,
     );
   };
   const renderContent = () => {
@@ -631,7 +709,7 @@ const App: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {filterSquares(squares).map((square) => (
+                  {filterSquares().map((square: Square) => (
                     <tr
                       key={square.id}
                       onClick={() => {
@@ -718,7 +796,7 @@ const App: React.FC = () => {
                     date: "2025-03-23",
                     time: "6:00 PM CST",
                     team1: { id: 1, name: "Pending", color: "red", record: "0-0-0", image: noImage },
-                    team2: { id: 3, name: "Pending", color: "green", record: "0-0-0", image: noImage},
+                    team2: { id: 3, name: "Pending", color: "green", record: "0-0-0", image: noImage },
                     venue: "YouTube"
                   }
                 ]
@@ -742,11 +820,11 @@ const App: React.FC = () => {
                               {match.team1.name}
                             </div>
                             <div className="text-sm text-gray-500">
-                              {seasonData[selectedSeason].squares.find(
+                              {seasonData[selectedSeason[0]].squares.find(
                                 (s) => s.name === match.team1.name,
                               )?.wins || 0}
                               -
-                              {seasonData[selectedSeason].squares.find(
+                              {seasonData[selectedSeason[0]].squares.find(
                                 (s) => s.name === match.team1.name,
                               )?.losses || 0}
                             </div>
@@ -771,11 +849,11 @@ const App: React.FC = () => {
                               {match.team2.name}
                             </div>
                             <div className="text-sm text-gray-500">
-                              {seasonData[selectedSeason].squares.find(
+                              {seasonData[selectedSeason[0]].squares.find(
                                 (s) => s.name === match.team2.name,
                               )?.wins || 0}
                               -
-                              {seasonData[selectedSeason].squares.find(
+                              {seasonData[selectedSeason[0]].squares.find(
                                 (s) => s.name === match.team2.name,
                               )?.losses || 0}
                             </div>
@@ -800,7 +878,7 @@ const App: React.FC = () => {
           </div>
         );
       case "awards":
-        const currentAwards = awardsData[selectedSeason];
+        const currentAwards = awardsData[selectedSeason[0]];
         return (
           <div
             className={`pt-24 px-6 max-w-7xl mx-auto min-h-screen transition-opacity duration-300 ${isContentTransitioning ? "opacity-0" : "opacity-100"
@@ -836,7 +914,7 @@ const App: React.FC = () => {
                         <h3 className="text-3xl font-bold">League Champion</h3>
                       </div>
                       <h4 className="text-2xl font-semibold mb-2">
-                        {currentAwards.champion.name  + " (" + currentAwards.champion.record + ")"}
+                        {currentAwards.champion.name + " (" + currentAwards.champion.record + ")"}
                       </h4>
                       <div className="flex gap-6">
                         <p className="text-gray-600 flex items-center">
@@ -915,7 +993,7 @@ const App: React.FC = () => {
                         </h3>
                       </div>
                       <h4 className="text-xl font-semibold mb-2">
-                        {currentAwards.rookie.name  + " (" + currentAwards.rookie.record + ")"}
+                        {currentAwards.rookie.name + " (" + currentAwards.rookie.record + ")"}
                       </h4>
                       <div className="flex gap-4">
                         <p className="text-gray-600 text-sm flex items-center">
@@ -939,32 +1017,8 @@ const App: React.FC = () => {
                     <h3 className="text-2xl font-bold">All-Square Team</h3>
                   </div>
                   <div className="grid grid-cols-4 gap-4">
-                    {[
-                      {
-                        name: "Yellow",
-                        color: "yellow",
-                        record: "10-5",
-                        image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500"
-                      },
-                      {
-                        name: "Green",
-                        color: "green",
-                        record: "8-7",
-                        image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500"
-                      },
-                      {
-                        name: "Arctic",
-                        color: "arctic",
-                        record: "9-6",
-                        image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500"
-                      },
-                      {
-                        name: "Crimson",
-                        color: "crimson",
-                        record: "11-3-1",
-                        image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500"
-                      },
-                    ].map((player, index) => (
+                    {currentAwards.allSquareTeam
+                    .map((player, index) => (
                       <div
                         key={index}
                         className="bg-gray-50 rounded-xl p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
@@ -1040,7 +1094,7 @@ const App: React.FC = () => {
                         <h3 className="text-2xl font-bold">Most Tactical</h3>
                       </div>
                       <h4 className="text-xl font-semibold mb-2">
-                      {currentAwards.mostTactical.name}
+                        {currentAwards.mostTactical.name}
                       </h4>
                       <div className="flex gap-4">
                         <p className="text-gray-600 text-sm flex items-center">
@@ -1070,7 +1124,7 @@ const App: React.FC = () => {
                         <h3 className="text-2xl font-bold">Most Nimble</h3>
                       </div>
                       <h4 className="text-xl font-semibold mb-2">
-                      {currentAwards.mostNimble.name}
+                        {currentAwards.mostNimble.name}
                       </h4>
                       <div className="flex gap-4">
                         <p className="text-gray-600 text-sm flex items-center">
@@ -1088,26 +1142,7 @@ const App: React.FC = () => {
                     <h3 className="text-2xl font-bold">Single Game Highs</h3>
                   </div>
                   <div className="grid grid-cols-4 gap-6">
-                    {[
-                      {
-                        category: "Most Damage Done",
-                        player: "Goldenrod",
-                        value: "63",
-                        date: "Week #4",
-                      },
-                      {
-                        category: "Most Power Ups",
-                        player: "White",
-                        value: "79",
-                        date: "Week #9",
-                      },
-                      {
-                        category: "Most Wall Bounces",
-                        player: "Green",
-                        value: "683",
-                        date: "Week #10",
-                      }
-                    ].map((record, index) => (
+                    {currentAwards.singleGameHighs.map((record, index) => (
                       <div key={index} className="bg-gray-50 rounded-xl p-4">
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-semibold text-gray-600">
@@ -1118,8 +1153,8 @@ const App: React.FC = () => {
                           </span>
                         </div>
                         <div className="text-sm text-gray-500">
-                          <p className="font-medium">{record.player}</p>
-                          <p>{record.date}</p>
+                          <p className="font-medium">{record.square}</p>
+                          <p>{record.week}</p>
                         </div>
                       </div>
                     ))}
@@ -1142,24 +1177,28 @@ const App: React.FC = () => {
                   name: "Olive_thesemi_goat",
                   amount: "20",
                   company: "Tech Innovations Inc.",
+                  member: false
                 },
                 {
                   name: "Grated Shtick",
                   amount: "5",
                   tier: "Platinum",
                   company: "Global Ventures Ltd.",
+                  member: false
                 },
                 {
                   name: "urdoom",
                   amount: "4.99",
                   tier: "Platinum",
                   company: "Future Systems",
+                  member: false
                 },
                 {
                   name: "ThatCyanSquare",
                   amount: "0.99",
                   tier: "Gold",
                   company: "Creative Solutions",
+                  member: false
                 }
               ].map((donor, index) => (
                 <div
@@ -1169,12 +1208,12 @@ const App: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-semibold">{donor.name}</h3>
                     <div
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${donor.amount >= 150000
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${donor.member
                         ? "bg-green-100 text-green-800"
                         : "bg-gray-100 text-gray-800"
                         }`}
                     >
-                      {donor.amount >= 150000 ? "Member" : "Non-member"}
+                      {donor.member ? "Member" : "Non-member"}
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -1224,12 +1263,12 @@ const App: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {[...filterSquares(squares)]
+                  {[...filterSquares()]
                     .sort((a, b) => {
                       if (b.wins !== a.wins) return b.wins - a.wins;
                       return a.losses - b.losses;
                     })
-                    .map((square, index, array) => {
+                    .map((square, index) => {
                       const winRate = (
                         (square.wins / (square.wins + square.losses)) *
                         100
@@ -1483,7 +1522,7 @@ const App: React.FC = () => {
                 Meet the Squares
               </h2>
               <div className="grid grid-cols-3 gap-8">
-                {filterSquares(squares).map((square) => (
+                {filterSquares().map((square: Square) => (
                   <div
                     key={square.id}
                     className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
