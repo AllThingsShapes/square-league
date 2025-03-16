@@ -463,14 +463,7 @@ interface AwardsData {
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <div className="space-y-2">
             <p>
-              <i className="fas fa-envelope mr-2"></i> info@squareleague.com
-            </p>
-            <p>
-              <i className="fas fa-phone mr-2"></i> +1 (555) 123-4567
-            </p>
-            <p>
-              <i className="fas fa-map-marker-alt mr-2"></i> 123 Square Avenue,
-              NY 10001
+              <i className="fas fa-envelope mr-2"></i> bouncingballs247@gmail.com
             </p>
           </div>
         </div>
