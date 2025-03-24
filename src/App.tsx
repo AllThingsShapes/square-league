@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from "react";
 const season1 = "Season #1";
 const season2 = "Season #2";
+const season3 = "Season #3";
 const noImage = "https://docs.google.com/drawings/d/e/2PACX-1vTp0pCZBSnJqN3oio54HByICauB0sfEKLX1-lqc7R17BBPqqGrAlyUdcbPWSTsRRvJrMT5kdvPJFcDR/pub?w=1500&h=1500";
 const App: React.FC = () => {
-  const [selectedSeason, setSelectedSeason] = useState([season2]);
+  const [selectedSeason, setSelectedSeason] = useState([season3]);
   const [isContentTransitioning, setIsContentTransitioning] = useState(false);
   const handleSeasonChange = (newSeason: string) => {
     setIsContentTransitioning(true);
@@ -93,25 +94,26 @@ const App: React.FC = () => {
     value: string,
     week: string
   }
-// Define the type for season data
-interface SeasonData {
-  [key: string]: {
-    squares: Square[];
-  };
-}
+  // Define the type for season data
+  interface SeasonData {
+    [key: string]: {
+      squares: Square[];
+    };
+  }
 
-interface AwardsData {
-  [key: string]: {
-    champion: Champion,
-    mvp: Mvp,
-    rookie: Rookie,
-    allSquareTeam: AllSquare[],
-    mostAggressive: MostAggressive,
-    mostTactical: MostTactical,
-    mostNimble: MostNimble,
-    singleGameHighs: GameHigh[];
-  };
-}
+  interface AwardsData {
+    [key: string]: {
+      champion: Champion,
+      mvp: Mvp,
+      rookie: Rookie,
+      allSquareTeam: AllSquare[],
+      mostAggressive: MostAggressive,
+      mostTactical: MostTactical,
+      mostNimble: MostNimble,
+      singleGameHighs: GameHigh[];
+    };
+  }
+
 
   const awardsData: AwardsData = {
     [season1]: {
@@ -153,18 +155,19 @@ interface AwardsData {
           name: "Not Awarded",
           color: "none",
           record: "0-0-0",
-          image: noImage  
+          image: noImage
         },
         {
           name: "Not Awarded",
           color: "none",
           record: "0-0-0",
-          image: noImage},
+          image: noImage
+        },
         {
           name: "Not Awarded",
           color: "none",
           record: "0-0-0",
-          image: noImage  
+          image: noImage
         },
       ],
       mostAggressive: {
@@ -304,8 +307,105 @@ interface AwardsData {
           week: "Week #10",
         }
       ],
+    },
+    [season3]: {
+      champion: {
+        name: "Pending",
+        color: "none",
+        record: "0-0",
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
+        image: noImage
+      },
+      mvp: {
+        name: "Pending",
+        color: "none",
+        record: "0-0-0",
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
+        image: noImage
+      },
+      rookie: {
+        name: "Pending",
+        color: "none",
+        record: "0-0-0",
+        damageDone: "0",
+        powerUps: "0",
+        wallBounces: "0",
+        image: noImage
+      },
+      allSquareTeam: [
+        {
+          name: "Pending",
+          color: "none",
+          record: "0-0-0",
+          image: noImage
+        },
+        {
+          name: "Pending",
+          color: "none",
+          record: "0-0-0",
+          image: noImage
+        },
+        {
+          name: "Pending",
+          color: "none",
+          record: "0-0-0",
+          image: noImage
+        },
+        {
+          name: "Pending",
+          color: "none",
+          record: "0-0-0",
+          image: noImage
+        },
+      ],
+      mostAggressive: {
+        name: "Pending",
+        color: "none",
+        damageDone: "0",
+        damageDonePerGame: "0",
+        image: noImage
+      },
+      mostTactical: {
+        name: "Pending",
+        color: "none",
+        powerUps: "0",
+        powerUpsPerGame: "0",
+        image: noImage
+      },
+      mostNimble: {
+        name: "Pending",
+        color: "none",
+        wallBounces: "0",
+        wallBouncesPerGame: "0",
+        image: noImage
+      },
+      singleGameHighs: [
+        {
+          category: "Most Damage Done",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        },
+        {
+          category: "Most Power Ups",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        },
+        {
+          category: "Most Wall Bounces",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        }
+      ],
     }
   };
+
   const [selectedColor, setSelectedColor] = useState("all");
   const [showSeasonDropdown, setShowSeasonDropdown] = useState(false);
   const [showColorDropdown, setShowColorDropdown] = useState(false);
@@ -343,12 +443,36 @@ interface AwardsData {
         { id: 15, color: "coral", name: "Coral", wins: 9, losses: 6, draws: 0, power_ups: 339, damage_done: 582, wall_bounces: 1555, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500" },
         { id: 16, color: "olive", name: "Olive", wins: 6, losses: 8, draws: 1, power_ups: 361, damage_done: 553, wall_bounces: 1848, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" }
       ],
+    },
+    [season3]: {
+      squares: [
+        { id: 1, color: "red", name: "Red", wins: 2, losses: 0, draws: 0, power_ups: 18, damage_done: 85, wall_bounces: 219, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
+        { id: 2, color: "blue", name: "Blue", wins: 0, losses: 2, draws: 0, power_ups: 18, damage_done: 77, wall_bounces: 209, image: "https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500" },
+        { id: 3, color: "green", name: "Green", wins: 0, losses: 2, draws: 0, power_ups: 20, damage_done: 75, wall_bounces: 201, image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500" },
+        { id: 4, color: "yellow", name: "Yellow", wins: 2, losses: 0, draws: 0, power_ups: 23, damage_done: 82, wall_bounces: 182, image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500" },
+        { id: 5, color: "purple", name: "Purple", wins: 1, losses: 1, draws: 0, power_ups: 34, damage_done: 85, wall_bounces: 224, image: "https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500" },
+        { id: 6, color: "hot_pink", name: "Hot Pink", wins: 2, losses: 0, draws: 0, power_ups: 28, damage_done: 77, wall_bounces: 199, image: "https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500" },
+        { id: 7, color: "cyan", name: "Cyan", wins: 1, losses: 1, draws: 0, power_ups: 36, damage_done: 75, wall_bounces: 229, image: "https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500" },
+        { id: 8, color: "orange", name: "Orange", wins: 1, losses: 1, draws: 0, power_ups: 26, damage_done: 80, wall_bounces: 242, image: "https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500" },
+        { id: 9, color: "arctic", name: "Arctic", wins: 0, losses: 2, draws: 0, power_ups: 15, damage_done: 78, wall_bounces: 204, image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500" },
+        { id: 10, color: "crimson", name: "Crimson", wins: 1, losses: 1, draws: 0, power_ups: 27, damage_done: 79, wall_bounces: 230, image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500" },
+        { id: 11, color: "cerulean", name: "Cerulean", wins: 2, losses: 0, draws: 0, power_ups: 24, damage_done: 83, wall_bounces: 204, image: "https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500" },
+        { id: 12, color: "emerald", name: "Emerald", wins: 1, losses: 1, draws: 0, power_ups: 25, damage_done: 79, wall_bounces: 227, image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500" },
+        { id: 13, color: "goldenrod", name: "Goldenrod", wins: 1, losses: 1, draws: 0, power_ups: 20, damage_done: 81, wall_bounces: 177, image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500" },
+        { id: 14, color: "diamond", name: "Diamond", wins: 0, losses: 2, draws: 0, power_ups: 28, damage_done: 83, wall_bounces: 209, image: "https://docs.google.com/drawings/d/e/2PACX-1vTwIEKDfpQJqOzx562jQRB1VHpHkcJKoTdodLni9ktC4cbJw11LcgjwsymNy49METDwq6R2WC3HBBrs/pub?w=1500&h=1500" },
+        { id: 15, color: "coral", name: "Coral", wins: 1, losses: 1, draws: 0, power_ups: 27, damage_done: 81, wall_bounces: 222, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500" },
+        { id: 16, color: "olive", name: "Olive", wins: 2, losses: 0, draws: 0, power_ups: 20, damage_done: 79, wall_bounces: 213, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" },
+        { id: 17, color: "navy", name: "Navy", wins: 0, losses: 2, draws: 0, power_ups: 23, damage_done: 77, wall_bounces: 223, image: "https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500" },
+        { id: 18, color: "teal", name: "Teal", wins: 2, losses: 0, draws: 0, power_ups: 22, damage_done: 77, wall_bounces: 236, image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500" },
+        { id: 19, color: "indigo", name: "Indigo", wins: 1, losses: 1, draws: 0, power_ups: 27, damage_done: 79, wall_bounces: 205, image: "https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500" },
+        { id: 20, color: "tan", name: "Tan", wins: 0, losses: 2, draws: 0, power_ups: 27, damage_done: 81, wall_bounces: 210, image: "https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500" }
+      ]
     }
   };
   const [selectedWeekNumber, setSelectedWeekNumber] = useState(1);
   const [showWeekDropdown, setShowWeekDropdown] = useState(false);
   const [showSquareProfile, setShowSquareProfile] = useState(false);
-  const seasons = [season1, season2];
+  const seasons = [season1, season2, season3];
   const colors = ["all", "red", "blue", "green", "yellow", "purple"];
   const squares = [
     { id: 1, color: "red", name: "Red", wins: 9, losses: 6, draws: 0, power_ups: 310, damage_done: 550, wall_bounces: 1522, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
@@ -366,7 +490,12 @@ interface AwardsData {
     { id: 13, color: "goldenrod", name: "Goldenrod", wins: 7, losses: 8, draws: 0, power_ups: 320, damage_done: 580, wall_bounces: 1761, image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500" },
     { id: 14, color: "white", name: "White", wins: 5, losses: 8, draws: 2, power_ups: 358, damage_done: 577, wall_bounces: 1841, image: "https://docs.google.com/drawings/d/e/2PACX-1vQ5anRcOUSdIvO6yiDBvle67nELyNB-Zbj14AxwxgxhTzGFC5Pt4EOF2sl7kDf5blRyzZgLFmyCmLHh/pub?w=1500&h=1500" },
     { id: 15, color: "coral", name: "Coral", wins: 9, losses: 6, draws: 0, power_ups: 339, damage_done: 582, wall_bounces: 1555, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500" },
-    { id: 16, color: "olive", name: "Olive", wins: 6, losses: 8, draws: 1, power_ups: 361, damage_done: 553, wall_bounces: 1848, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" }
+    { id: 16, color: "olive", name: "Olive", wins: 6, losses: 8, draws: 1, power_ups: 361, damage_done: 553, wall_bounces: 1848, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" },
+    { id: 17, color: "navy", name: "Navy", wins: 0, losses: 2, draws: 0, power_ups: 23, damage_done: 77, wall_bounces: 223, image: "https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500" },
+    { id: 18, color: "teal", name: "Teal", wins: 2, losses: 0, draws: 0, power_ups: 22, damage_done: 77, wall_bounces: 236, image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500" },
+    { id: 19, color: "indigo", name: "Indigo", wins: 1, losses: 1, draws: 0, power_ups: 27, damage_done: 79, wall_bounces: 205, image: "https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500" },
+    { id: 20, color: "tan", name: "Tan", wins: 0, losses: 2, draws: 0, power_ups: 27, damage_done: 81, wall_bounces: 210, image: "https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500" },
+    { id: 21, color: "diamond", name: "Diamond", wins: 0, losses: 2, draws: 0, power_ups: 28, damage_done: 83, wall_bounces: 209, image: "https://docs.google.com/drawings/d/e/2PACX-1vTwIEKDfpQJqOzx562jQRB1VHpHkcJKoTdodLni9ktC4cbJw11LcgjwsymNy49METDwq6R2WC3HBBrs/pub?w=1500&h=1500" },
   ];
   useEffect(() => {
     // Remove chart initialization
@@ -680,6 +809,79 @@ interface AwardsData {
     if (selectedColor === "all") return currentSeasonSquares;
     return currentSeasonSquares.filter(
       (square: Square) => square.color === selectedColor,
+    );
+  };
+  const renderDonors = () => {
+    const donors = [
+      {
+        name: "Olive_thesemi_goat",
+        amount: 20,
+        company: "Tech Innovations Inc.",
+        member: false
+      },
+      {
+        name: "Grated Shtick",
+        amount: 5,
+        tier: "Platinum",
+        company: "Global Ventures Ltd.",
+        member: false
+      },
+      {
+        name: "urdoom",
+        amount: 9.98,
+        tier: "Platinum",
+        company: "Future Systems",
+        member: false
+      },
+      {
+        name: "ThatCyanSquare",
+        amount: 0.99,
+        tier: "Gold",
+        company: "Creative Solutions",
+        member: false
+      },
+      {
+        name: "ThatDarn Seel",
+        amount: 5,
+        tier: "Gold",
+        company: "Creative Solutions",
+        member: false
+      }
+    ];
+
+    // Sort donors by amount in descending order
+    const sortedDonors = donors.sort((a, b) => b.amount - a.amount);
+
+    return (
+      <div className="grid grid-cols-3 gap-8">
+        {sortedDonors.map((donor, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold">{donor.name}</h3>
+              <div
+                className={`px-3 py-1 rounded-full text-sm font-medium ${donor.member
+                  ? "bg-green-100 text-green-800"
+                  : "bg-gray-100 text-gray-800"
+                  }`}
+              >
+                {donor.member ? "Member" : "Non-member"}
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <i className="fas fa-gift text-green-500 mr-2"></i>
+                <span className="text-2xl font-bold text-green-600">
+                  ${donor.amount}
+                </span>
+              </div>
+              <p className="text-sm text-gray-500">Overall Contribution</p>
+            </div>
+          </div>
+        ))}
+      </div>
     );
   };
   const renderContent = () => {
@@ -1011,32 +1213,32 @@ interface AwardsData {
                   </div>
                   <div className="grid grid-cols-4 gap-4">
                     {currentAwards.allSquareTeam
-                    .map((player, index) => (
-                      <div
-                        key={index}
-                        className="bg-gray-50 rounded-xl p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
-                      >
-                        <div className="w-16 h-16 relative">
-                          <div className="absolute inset-0 bg-blue-100 rounded-xl rotate-3"></div>
-                          <div className="absolute inset-0 bg-white rounded-xl">
-                            <img
-                              src={player.image}
-                              alt={player.name}
-                              className="w-full h-full object-cover rounded-xl"
-                            />
+                      .map((player, index) => (
+                        <div
+                          key={index}
+                          className="bg-gray-50 rounded-xl p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
+                        >
+                          <div className="w-16 h-16 relative">
+                            <div className="absolute inset-0 bg-blue-100 rounded-xl rotate-3"></div>
+                            <div className="absolute inset-0 bg-white rounded-xl">
+                              <img
+                                src={player.image}
+                                alt={player.name}
+                                className="w-full h-full object-cover rounded-xl"
+                              />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between">
+                              <h4 className="font-semibold">{player.name}</h4>
+                            </div>
+                            <p className="text-sm text-gray-600 mt-1 flex items-center">
+                              <i className="fas fa-running mr-2"></i>
+                              Season Record: {player.record}
+                            </p>
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <h4 className="font-semibold">{player.name}</h4>
-                          </div>
-                          <p className="text-sm text-gray-600 mt-1 flex items-center">
-                            <i className="fas fa-running mr-2"></i>
-                            Season Record: {player.record}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
                   </div>
                 </div>
               </div>
@@ -1164,63 +1366,7 @@ interface AwardsData {
               }`}
           >
             <h2 className="text-3xl font-bold mb-8">Our Generous Donors</h2>
-            <div className="grid grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Olive_thesemi_goat",
-                  amount: "20",
-                  company: "Tech Innovations Inc.",
-                  member: false
-                },
-                {
-                  name: "Grated Shtick",
-                  amount: "5",
-                  tier: "Platinum",
-                  company: "Global Ventures Ltd.",
-                  member: false
-                },
-                {
-                  name: "urdoom",
-                  amount: "4.99",
-                  tier: "Platinum",
-                  company: "Future Systems",
-                  member: false
-                },
-                {
-                  name: "ThatCyanSquare",
-                  amount: "0.99",
-                  tier: "Gold",
-                  company: "Creative Solutions",
-                  member: false
-                }
-              ].map((donor, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold">{donor.name}</h3>
-                    <div
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${donor.member
-                        ? "bg-green-100 text-green-800"
-                        : "bg-gray-100 text-gray-800"
-                        }`}
-                    >
-                      {donor.member ? "Member" : "Non-member"}
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <i className="fas fa-gift text-green-500 mr-2"></i>
-                      <span className="text-2xl font-bold text-green-600">
-                        ${donor.amount}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-500">Overall Contribution</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {renderDonors()}
           </div>
         );
       case "standings":
@@ -1261,7 +1407,7 @@ interface AwardsData {
                       if (b.wins !== a.wins) return b.wins - a.wins;
                       return a.losses - b.losses;
                     })
-                    .map((square, index) => {
+                    .map((square, index, array) => {
                       const winRate = (
                         (square.wins / (square.wins + square.losses)) *
                         100
@@ -1273,6 +1419,8 @@ interface AwardsData {
                           const rand = Math.random();
                           return rand > 0.6 ? "W" : rand > 0.3 ? "L" : "D";
                         });
+                      const isRelegationLine = array.length > 8 && index === array.length - 4;
+                      const isPlayoffLine = array.length > 8 && index === 7;
                       return (
                         <tr
                           key={square.id}
@@ -1280,7 +1428,7 @@ interface AwardsData {
                             setSelectedSquare(square.name);
                             setShowSquareProfile(true);
                           }}
-                          className={`${index === 7 ? 'border-b-4 border-b-green-500 after:content-["Playoffs"] after:absolute after:right-4 after:text-green-600 after:font-medium after:-bottom-1 relative' : index === 11 ? 'border-b-4 border-b-red-500 after:content-["Relegation"] after:absolute after:right-4 after:text-red-600 after:font-medium after:-bottom-1 relative' : "border-b border-gray-100"} hover:bg-gray-50 cursor-pointer transition-colors duration-200 ${index === 0 ? "bg-yellow-50" : index === 1 ? "bg-gray-50" : index === 2 ? "bg-orange-50" : ""}`}
+                          className={`${isRelegationLine ? 'border-b-4 border-b-red-500 after:content-["Relegation"] after:absolute after:right-4 after:text-red-600 after:font-medium after:-bottom-1 relative' : isPlayoffLine ? 'border-b-4 border-b-green-500 after:content-["Playoffs"] after:absolute after:right-4 after:text-green-600 after:font-medium after:-bottom-1 relative' : "border-b border-gray-100"} hover:bg-gray-50 cursor-pointer transition-colors duration-200 ${index === 0 ? "bg-yellow-50" : index === 1 ? "bg-gray-50" : index === 2 ? "bg-orange-50" : ""}`}
                         >
                           <td className="px-6 py-4">
                             <span

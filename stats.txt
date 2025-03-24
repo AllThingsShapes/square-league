@@ -1,0 +1,20 @@
+red	Red	2	0	0	18	85	219	https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500
+blue	Blue	0	2	0	18	77	209	https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500
+green	Green	0	2	0	20	75	201	https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500
+yellow	Yellow	2	0	0	23	82	182	https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500
+purple	Purple	1	1	0	34	85	224	https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500
+hot_pink	Hot Pink	2	0	0	28	77	199	https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500
+cyan	Cyan	1	1	0	36	75	229	https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500
+orange	Orange	1	1	0	26	80	242	https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500
+arctic	Arctic	0	2	0	15	78	204	https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500
+crimson	Crimson	1	1	0	27	79	230	https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500
+cerulean	Cerulean	2	0	0	24	83	204	https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500
+emerald	Emerald	1	1	0	25	79	227	https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500
+goldenrod	Goldenrod	1	1	0	20	81	177	https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500
+diamond	Diamond	0	2	0	28	83	209	https://docs.google.com/drawings/d/e/2PACX-1vTwIEKDfpQJqOzx562jQRB1VHpHkcJKoTdodLni9ktC4cbJw11LcgjwsymNy49METDwq6R2WC3HBBrs/pub?w=1500&h=1500
+coral	Coral	1	1	0	27	81	222	https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500
+olive	Olive	2	0	0	20	79	213	https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500
+navy	Navy	0	2	0	23	77	223	https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500
+teal	Teal	2	0	0	22	77	236	https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500
+indigo	Indigo	1	1	0	27	79	205	https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500
+tan	Tan	0	2	0	27	81	210	https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500
