@@ -1,0 +1,190 @@
+2025-03-16	1	Blue	Crimson
+2025-03-16	1	Purple	Crimson
+2025-03-16	1	Orange	Cyan
+2025-03-16	1	Green	Coral
+2025-03-16	1	Diamond	Yellow
+2025-03-16	1	Tan	Olive
+2025-03-16	1	Arctic	Red
+2025-03-16	1	Navy	Indigo
+2025-03-16	1	Goldenrod	Hot Pink
+2025-03-16	1	Emerald	Emerald
+2025-03-23	2	Indigo	Olive
+2025-03-23	2	Coral	Goldenrod
+2025-03-23	2	Cyan	Cyan
+2025-03-23	2	Cerulean	Arctic
+2025-03-23	2	Red	Purple
+2025-03-23	2	Diamond	Orange
+2025-03-23	2	Hot Pink	Navy
+2025-03-23	2	Yellow	Green
+2025-03-23	2	Teal	Blue
+2025-03-23	2	Crimson	Tan
+2025-03-30	3	Purple	Cerulean
+2025-03-30	3	Navy	Coral
+2025-03-30	3	Blue	Cyan
+2025-03-30	3	Tan	Indigo
+2025-03-30	3	Emerald	Diamond
+2025-03-30	3	Goldenrod	Yellow
+2025-03-30	3	Crimson	Red
+2025-03-30	3	Orange	Green
+2025-03-30	3	Arctic	Teal
+2025-03-30	3	Olive	Hot Pink
+2025-04-06	4	Coral	Olive
+2025-04-06	4	Green	Emerald
+2025-04-06	4	Hot Pink	Indigo
+2025-04-06	4	Red	Tan
+2025-04-06	4	Cerulean	Crimson
+2025-04-06	4	Diamond	Blue
+2025-04-06	4	Teal	Purple
+2025-04-06	4	Yellow	Navy
+2025-04-06	4	Goldenrod	Orange
+2025-04-06	4	Cyan	Arctic
+2025-04-13	5	Emerald	Goldenrod
+2025-04-13	5	Blue	Green
+2025-04-13	5	Tan	Hot Pink
+2025-04-13	5	Arctic	Diamond
+2025-04-13	5	Indigo	Coral
+2025-04-13	5	Olive	Yellow
+2025-04-13	5	Crimson	Teal
+2025-04-13	5	Orange	Navy
+2025-04-13	5	Red	Cerulean
+2025-04-13	5	Purple	Cyan
+2025-04-20	6	Goldenrod	Blue
+2025-04-20	6	Green	Arctic
+2025-04-20	6	Navy	Emerald
+2025-04-20	6	Cerulean	Tan
+2025-04-20	6	Yellow	Indigo
+2025-04-20	6	Teal	Red
+2025-04-20	6	Olive	Orange
+2025-04-20	6	Diamond	Purple
+2025-04-20	6	Cyan	Crimson
+2025-04-20	6	Coral	Hot Pink
+2025-04-27	7	Hot Pink	Yellow
+2025-04-27	7	Emerald	Olive
+2025-04-27	7	Orange	Indigo
+2025-04-27	7	Cerulean	Teal
+2025-04-27	7	Arctic	Goldenrod
+2025-04-27	7	Crimson	Diamond
+2025-04-27	7	Red	Cyan
+2025-04-27	7	Purple	Green
+2025-04-27	7	Tan	Coral
+2025-04-27	7	Blue	Navy
+2025-05-04	8	Navy	Arctic
+2025-05-04	8	Yellow	Coral
+2025-05-04	8	Hot Pink	Orange
+2025-05-04	8	Goldenrod	Purple
+2025-05-04	8	Cyan	Cerulean
+2025-05-04	8	Green	Crimson
+2025-05-04	8	Olive	Blue
+2025-05-04	8	Teal	Tan
+2025-05-04	8	Indigo	Emerald
+2025-05-04	8	Diamond	Red
+2025-05-11	9	Arctic	Olive
+2025-05-11	9	Teal	Cyan
+2025-05-11	9	Red	Green
+2025-05-11	9	Blue	Indigo
+2025-05-11	9	Orange	Coral
+2025-05-11	9	Tan	Yellow
+2025-05-11	9	Crimson	Goldenrod
+2025-05-11	9	Cerulean	Diamond
+2025-05-11	9	Purple	Navy
+2025-05-11	9	Emerald	Hot Pink
+2025-05-18	10	Cyan	Tan
+2025-05-18	10	Coral	Emerald
+2025-05-18	10	Navy	Crimson
+2025-05-18	10	Olive	Purple
+2025-05-18	10	Goldenrod	Red
+2025-05-18	10	Hot Pink	Blue
+2025-05-18	10	Green	Cerulean
+2025-05-18	10	Diamond	Teal
+2025-05-18	10	Indigo	Arctic
+2025-05-18	10	Yellow	Orange
+2025-05-25	11	Orange	Tan
+2025-05-25	11	Red	Navy
+2025-05-25	11	Arctic	Hot Pink
+2025-05-25	11	Cyan	Diamond
+2025-05-25	11	Crimson	Olive
+2025-05-25	11	Purple	Indigo
+2025-05-25	11	Cerulean	Goldenrod
+2025-05-25	11	Teal	Green
+2025-05-25	11	Emerald	Yellow
+2025-05-25	11	Blue	Coral
+2025-06-01	12	Hot Pink	Purple
+2025-06-01	12	Yellow	Blue
+2025-06-01	12	Olive	Red
+2025-06-01	12	Green	Cyan
+2025-06-01	12	Navy	Cerulean
+2025-06-01	12	Orange	Emerald
+2025-06-01	12	Goldenrod	Teal
+2025-06-01	12	Coral	Arctic
+2025-06-01	12	Indigo	Crimson
+2025-06-01	12	Tan	Diamond
+2025-06-08	13	Teal	Navy
+2025-06-08	13	Cyan	Goldenrod
+2025-06-08	13	Crimson	Hot Pink
+2025-06-08	13	Cerulean	Olive
+2025-06-08	13	Diamond	Green
+2025-06-08	13	Emerald	Tan
+2025-06-08	13	Blue	Orange
+2025-06-08	13	Red	Indigo
+2025-06-08	13	Arctic	Yellow
+2025-06-08	13	Purple	Coral
+2025-06-15	14	Navy	Cyan
+2025-06-15	14	Coral	Crimson
+2025-06-15	14	Goldenrod	Diamond
+2025-06-15	14	Tan	Green
+2025-06-15	14	Olive	Teal
+2025-06-15	14	Hot Pink	Red
+2025-06-15	14	Orange	Arctic
+2025-06-15	14	Indigo	Cerulean
+2025-06-15	14	Emerald	Blue
+2025-06-15	14	Yellow	Purple
+2025-06-22	15	Red	Coral
+2025-06-22	15	Green	Goldenrod
+2025-06-22	15	Cyan	Olive
+2025-06-22	15	Purple	Orange
+2025-06-22	15	Blue	Tan
+2025-06-22	15	Diamond	Navy
+2025-06-22	15	Teal	Indigo
+2025-06-22	15	Crimson	Yellow
+2025-06-22	15	Arctic	Emerald
+2025-06-22	15	Cerulean	Hot Pink
+2025-06-29	16	Tan	Goldenrod
+2025-06-29	16	Indigo	Cyan
+2025-06-29	16	Navy	Green
+2025-06-29	16	Hot Pink	Teal
+2025-06-29	16	Coral	Cerulean
+2025-06-29	16	Emerald	Purple
+2025-06-29	16	Orange	Crimson
+2025-06-29	16	Olive	Diamond
+2025-06-29	16	Blue	Arctic
+2025-06-29	16	Yellow	Red
+2025-07-06	17	Diamond	Indigo
+2025-07-06	17	Cyan	Hot Pink
+2025-07-06	17	Cerulean	Yellow
+2025-07-06	17	Red	Orange
+2025-07-06	17	Teal	Coral
+2025-07-06	17	Goldenrod	Navy
+2025-07-06	17	Green	Olive
+2025-07-06	17	Purple	Blue
+2025-07-06	17	Crimson	Emerald
+2025-07-06	17	Arctic	Tan
+2025-07-13	18	Arctic	Purple
+2025-07-13	18	Orange	Cerulean
+2025-07-13	18	Blue	Crimson
+2025-07-13	18	Indigo	Green
+2025-07-13	18	Emerald	Red
+2025-07-13	18	Coral	Cyan
+2025-07-13	18	Yellow	Teal
+2025-07-13	18	Hot Pink	Diamond
+2025-07-13	18	Tan	Navy
+2025-07-13	18	Olive	Goldenrod
+2025-07-20	19	Green	Hot Pink
+2025-07-20	19	Navy	Olive
+2025-07-20	19	Purple	Tan
+2025-07-20	19	Teal	Orange
+2025-07-20	19	Cyan	Yellow
+2025-07-20	19	Goldenrod	Indigo
+2025-07-20	19	Diamond	Coral
+2025-07-20	19	Red	Blue
+2025-07-20	19	Crimson	Arctic
+2025-07-20	19	Cerulean	Emerald
