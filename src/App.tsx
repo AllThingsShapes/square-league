@@ -831,12 +831,12 @@ const App: React.FC = () => {
       },
       {
         name: "ThatCyanSquare",
-        amount: 0.99,
+        amount: 3.98,
         member: false
       },
       {
         name: "ThatDarn Seel",
-        amount: 5,
+        amount: 10,
         member: false
       }
     ];
