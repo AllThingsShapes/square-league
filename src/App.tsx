@@ -831,7 +831,7 @@ const App: React.FC = () => {
       },
       {
         name: "ThatCyanSquare",
-        amount: 3.98,
+        amount: 2.48,
         member: false
       },
       {
