@@ -1407,7 +1407,7 @@ const App: React.FC = () => {
                           const rand = Math.random();
                           return rand > 0.6 ? "W" : rand > 0.3 ? "L" : "D";
                         });
-                      const isRelegationLine = array.length > 8 && index === array.length - 4;
+                      const isRelegationLine = array.length > 8 && index === array.length - 5;
                       const isPlayoffLine = array.length > 8 && index === 7;
                       return (
                         <tr
