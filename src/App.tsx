@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const season1 = "Season #1";
 const season2 = "Season #2";
 const season3 = "Season #3";
+const season4 = "Season #4";
 const noImage = "https://docs.google.com/drawings/d/e/2PACX-1vTp0pCZBSnJqN3oio54HByICauB0sfEKLX1-lqc7R17BBPqqGrAlyUdcbPWSTsRRvJrMT5kdvPJFcDR/pub?w=1500&h=1500";
 const App: React.FC = () => {
   const testSchedule = [{ week: 1, date: "2025-03-16", time: "6:00 PM CST", team1: { name: "Blue" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:10 PM CST", team1: { name: "Purple" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:15 PM CST", team1: { name: "Orange" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:20 PM CST", team1: { name: "Green" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:25 PM CST", team1: { name: "Diamond" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:30 PM CST", team1: { name: "Tan" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:35 PM CST", team1: { name: "Arctic" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:40 PM CST", team1: { name: "Navy" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:45 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 1, date: "2025-03-16", time: "6:50 PM CST", team1: { name: "Emerald" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:00 PM CST", team1: { name: "Indigo" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:10 PM CST", team1: { name: "Coral" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:15 PM CST", team1: { name: "Cyan" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:20 PM CST", team1: { name: "Cerulean" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:25 PM CST", team1: { name: "Red" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:30 PM CST", team1: { name: "Diamond" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:35 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:40 PM CST", team1: { name: "Yellow" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:45 PM CST", team1: { name: "Teal" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 2, date: "2025-03-23", time: "6:50 PM CST", team1: { name: "Crimson" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:00 PM CST", team1: { name: "Purple" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:10 PM CST", team1: { name: "Navy" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:15 PM CST", team1: { name: "Blue" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:20 PM CST", team1: { name: "Tan" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:25 PM CST", team1: { name: "Emerald" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:30 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:35 PM CST", team1: { name: "Crimson" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:40 PM CST", team1: { name: "Orange" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:45 PM CST", team1: { name: "Arctic" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 3, date: "2025-03-30", time: "6:50 PM CST", team1: { name: "Olive" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:00 PM CST", team1: { name: "Coral" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:10 PM CST", team1: { name: "Green" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:15 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:20 PM CST", team1: { name: "Red" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:25 PM CST", team1: { name: "Cerulean" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:30 PM CST", team1: { name: "Diamond" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:35 PM CST", team1: { name: "Teal" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:40 PM CST", team1: { name: "Yellow" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:45 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 4, date: "2025-04-06", time: "6:50 PM CST", team1: { name: "Cyan" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:00 PM CST", team1: { name: "Emerald" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:10 PM CST", team1: { name: "Blue" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:15 PM CST", team1: { name: "Tan" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:20 PM CST", team1: { name: "Arctic" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:25 PM CST", team1: { name: "Indigo" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:30 PM CST", team1: { name: "Olive" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:35 PM CST", team1: { name: "Crimson" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:40 PM CST", team1: { name: "Orange" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:45 PM CST", team1: { name: "Red" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 5, date: "2025-04-13", time: "6:50 PM CST", team1: { name: "Purple" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:00 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:10 PM CST", team1: { name: "Green" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:15 PM CST", team1: { name: "Navy" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:20 PM CST", team1: { name: "Cerulean" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:25 PM CST", team1: { name: "Yellow" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:30 PM CST", team1: { name: "Teal" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:35 PM CST", team1: { name: "Olive" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:40 PM CST", team1: { name: "Diamond" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:45 PM CST", team1: { name: "Cyan" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 6, date: "2025-04-20", time: "6:50 PM CST", team1: { name: "Coral" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:00 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:10 PM CST", team1: { name: "Emerald" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:15 PM CST", team1: { name: "Orange" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:20 PM CST", team1: { name: "Cerulean" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:25 PM CST", team1: { name: "Arctic" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:30 PM CST", team1: { name: "Crimson" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:35 PM CST", team1: { name: "Red" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:40 PM CST", team1: { name: "Purple" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:45 PM CST", team1: { name: "Tan" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 7, date: "2025-04-27", time: "6:50 PM CST", team1: { name: "Blue" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:00 PM CST", team1: { name: "Navy" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:10 PM CST", team1: { name: "Yellow" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:15 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:20 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:25 PM CST", team1: { name: "Cyan" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:30 PM CST", team1: { name: "Green" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:35 PM CST", team1: { name: "Olive" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:40 PM CST", team1: { name: "Teal" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:45 PM CST", team1: { name: "Indigo" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 8, date: "2025-05-04", time: "6:50 PM CST", team1: { name: "Diamond" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:00 PM CST", team1: { name: "Arctic" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:10 PM CST", team1: { name: "Teal" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:15 PM CST", team1: { name: "Red" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:20 PM CST", team1: { name: "Blue" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:25 PM CST", team1: { name: "Orange" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:30 PM CST", team1: { name: "Tan" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:35 PM CST", team1: { name: "Crimson" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:40 PM CST", team1: { name: "Cerulean" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:45 PM CST", team1: { name: "Purple" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 9, date: "2025-05-11", time: "6:50 PM CST", team1: { name: "Emerald" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:00 PM CST", team1: { name: "Cyan" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:10 PM CST", team1: { name: "Coral" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:15 PM CST", team1: { name: "Navy" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:20 PM CST", team1: { name: "Olive" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:25 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:30 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:35 PM CST", team1: { name: "Green" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:40 PM CST", team1: { name: "Diamond" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:45 PM CST", team1: { name: "Indigo" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 10, date: "2025-05-18", time: "6:50 PM CST", team1: { name: "Yellow" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:00 PM CST", team1: { name: "Orange" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:10 PM CST", team1: { name: "Red" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:15 PM CST", team1: { name: "Arctic" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:20 PM CST", team1: { name: "Cyan" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:25 PM CST", team1: { name: "Crimson" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:30 PM CST", team1: { name: "Purple" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:35 PM CST", team1: { name: "Cerulean" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:40 PM CST", team1: { name: "Teal" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:45 PM CST", team1: { name: "Emerald" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 11, date: "2025-05-25", time: "6:50 PM CST", team1: { name: "Blue" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:00 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:10 PM CST", team1: { name: "Yellow" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:15 PM CST", team1: { name: "Olive" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:20 PM CST", team1: { name: "Green" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:25 PM CST", team1: { name: "Navy" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:30 PM CST", team1: { name: "Orange" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:35 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:40 PM CST", team1: { name: "Coral" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:45 PM CST", team1: { name: "Indigo" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 12, date: "2025-06-01", time: "6:50 PM CST", team1: { name: "Tan" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:00 PM CST", team1: { name: "Teal" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:10 PM CST", team1: { name: "Cyan" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:15 PM CST", team1: { name: "Crimson" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:20 PM CST", team1: { name: "Cerulean" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:25 PM CST", team1: { name: "Diamond" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:30 PM CST", team1: { name: "Emerald" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:35 PM CST", team1: { name: "Blue" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:40 PM CST", team1: { name: "Red" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:45 PM CST", team1: { name: "Arctic" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 13, date: "2025-06-08", time: "6:50 PM CST", team1: { name: "Purple" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:00 PM CST", team1: { name: "Navy" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:10 PM CST", team1: { name: "Coral" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:15 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:20 PM CST", team1: { name: "Tan" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:25 PM CST", team1: { name: "Olive" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:30 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:35 PM CST", team1: { name: "Orange" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:40 PM CST", team1: { name: "Indigo" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:45 PM CST", team1: { name: "Emerald" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 14, date: "2025-06-15", time: "6:50 PM CST", team1: { name: "Yellow" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:00 PM CST", team1: { name: "Red" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:10 PM CST", team1: { name: "Green" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:15 PM CST", team1: { name: "Cyan" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:20 PM CST", team1: { name: "Purple" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:25 PM CST", team1: { name: "Blue" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:30 PM CST", team1: { name: "Diamond" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:35 PM CST", team1: { name: "Teal" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:40 PM CST", team1: { name: "Crimson" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:45 PM CST", team1: { name: "Arctic" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 15, date: "2025-06-22", time: "6:50 PM CST", team1: { name: "Cerulean" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:00 PM CST", team1: { name: "Tan" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:10 PM CST", team1: { name: "Indigo" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:15 PM CST", team1: { name: "Navy" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:20 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:25 PM CST", team1: { name: "Coral" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:30 PM CST", team1: { name: "Emerald" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:35 PM CST", team1: { name: "Orange" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:40 PM CST", team1: { name: "Olive" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:45 PM CST", team1: { name: "Blue" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 16, date: "2025-06-29", time: "6:50 PM CST", team1: { name: "Yellow" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:00 PM CST", team1: { name: "Diamond" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:10 PM CST", team1: { name: "Cyan" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:15 PM CST", team1: { name: "Cerulean" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:20 PM CST", team1: { name: "Red" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:25 PM CST", team1: { name: "Teal" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:30 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:35 PM CST", team1: { name: "Green" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:40 PM CST", team1: { name: "Purple" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:45 PM CST", team1: { name: "Crimson" }, team2: { name: "Emerald" }, venue: "YouTube" }, { week: 17, date: "2025-07-06", time: "6:50 PM CST", team1: { name: "Arctic" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:00 PM CST", team1: { name: "Arctic" }, team2: { name: "Purple" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:10 PM CST", team1: { name: "Orange" }, team2: { name: "Cerulean" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:15 PM CST", team1: { name: "Blue" }, team2: { name: "Crimson" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:20 PM CST", team1: { name: "Indigo" }, team2: { name: "Green" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:25 PM CST", team1: { name: "Emerald" }, team2: { name: "Red" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:30 PM CST", team1: { name: "Coral" }, team2: { name: "Cyan" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:35 PM CST", team1: { name: "Yellow" }, team2: { name: "Teal" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:40 PM CST", team1: { name: "Hot Pink" }, team2: { name: "Diamond" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:45 PM CST", team1: { name: "Tan" }, team2: { name: "Navy" }, venue: "YouTube" }, { week: 18, date: "2025-07-13", time: "6:50 PM CST", team1: { name: "Olive" }, team2: { name: "Goldenrod" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:00 PM CST", team1: { name: "Green" }, team2: { name: "Hot Pink" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:10 PM CST", team1: { name: "Navy" }, team2: { name: "Olive" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:15 PM CST", team1: { name: "Purple" }, team2: { name: "Tan" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:20 PM CST", team1: { name: "Teal" }, team2: { name: "Orange" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:25 PM CST", team1: { name: "Cyan" }, team2: { name: "Yellow" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:30 PM CST", team1: { name: "Goldenrod" }, team2: { name: "Indigo" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:35 PM CST", team1: { name: "Diamond" }, team2: { name: "Coral" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:40 PM CST", team1: { name: "Red" }, team2: { name: "Blue" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:45 PM CST", team1: { name: "Crimson" }, team2: { name: "Arctic" }, venue: "YouTube" }, { week: 19, date: "2025-07-20", time: "6:50 PM CST", team1: { name: "Cerulean" }, team2: { name: "Emerald" }, venue: "YouTube" }]
@@ -87,6 +88,14 @@ const App: React.FC = () => {
     wallBounces: string,
     wallBouncesPerGame: string,
     image: string
+  }
+
+  interface User {
+    name: string,
+    balance: number,
+    betsPlaced: string,
+    bonusClaimed: string,
+    isMember: string
   }
 
   interface GameHigh {
@@ -311,6 +320,102 @@ const App: React.FC = () => {
     },
     [season3]: {
       champion: {
+        name: "Red",
+        color: "red",
+        record: "13-7-0",
+        damageDone: "875",
+        powerUps: "514",
+        wallBounces: "2714",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500"
+      },
+      mvp: {
+        name: "Teal",
+        color: "teal",
+        record: "16-4-0",
+        damageDone: "954",
+        powerUps: "584",
+        wallBounces: "3024",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500"
+      },
+      rookie: {
+        name: "Teal",
+        color: "teal",
+        record: "16-4-0",
+        damageDone: "954",
+        powerUps: "584",
+        wallBounces: "3024",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500"
+      },
+      allSquareTeam: [
+        {
+          name: "Teal",
+          color: "teal",
+          record: "16-4-0",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500"
+        },
+        {
+          name: "Emerald",
+          color: "emerald",
+          record: "13-7-0",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500"
+        },
+        {
+          name: "Hot Pink",
+          color: "hot_pink",
+          record: "11-7-2",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500"
+        },
+        {
+          name: "Goldenrod",
+          color: "goldenrod",
+          record: "11-9-0",
+          image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500"
+        },
+      ],
+      mostAggressive: {
+        name: "Goldenrod",
+        color: "goldenrod",
+        damageDone: "1007",
+        damageDonePerGame: "50.35",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500"
+      },
+      mostTactical: {
+        name: "Emerald",
+        color: "emerald",
+        powerUps: "598",
+        powerUpsPerGame: "29.9",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500"
+      },
+      mostNimble: {
+        name: "Cyan",
+        color: "cyan",
+        wallBounces: "3206",
+        wallBouncesPerGame: "160.3",
+        image: "https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500"
+      },
+      singleGameHighs: [
+        {
+          category: "Most Damage Done",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        },
+        {
+          category: "Most Power Ups",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        },
+        {
+          category: "Most Wall Bounces",
+          square: "Pending",
+          value: "0",
+          week: "Week #0",
+        }
+      ],
+    },
+    [season4]: {
+      champion: {
         name: "Pending",
         color: "none",
         record: "0-0",
@@ -447,33 +552,61 @@ const App: React.FC = () => {
     },
     [season3]: {
       squares: [
-        { id: 1, color: "red", name: "Red", wins: 12, losses: 6, draws: 0, power_ups: 457, damage_done: 753, wall_bounces: 2400, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
-        { id: 2, color: "blue", name: "Blue", wins: 7, losses: 11, draws: 0, power_ups: 412, damage_done: 777, wall_bounces: 2296, image: "https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500" },
-        { id: 3, color: "green", name: "Green", wins: 8, losses: 10, draws: 0, power_ups: 415, damage_done: 764, wall_bounces: 2253, image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500" },
-        { id: 4, color: "yellow", name: "Yellow", wins: 10, losses: 8, draws: 0, power_ups: 441, damage_done: 818, wall_bounces: 2419, image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500" },
-        { id: 5, color: "purple", name: "Purple", wins: 6, losses: 11, draws: 1, power_ups: 482, damage_done: 785, wall_bounces: 2528, image: "https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500" },
-        { id: 6, color: "hot_pink", name: "Hot Pink", wins: 11, losses: 5, draws: 2, power_ups: 466, damage_done: 801, wall_bounces: 2498, image: "https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500" },
-        { id: 7, color: "cyan", name: "Cyan", wins: 7, losses: 11, draws: 0, power_ups: 464, damage_done: 745, wall_bounces: 2800, image: "https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500" },
-        { id: 8, color: "orange", name: "Orange", wins: 8, losses: 9, draws: 1, power_ups: 398, damage_done: 754, wall_bounces: 2104, image: "https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500" },
-        { id: 9, color: "arctic", name: "Arctic", wins: 7, losses: 11, draws: 0, power_ups: 460, damage_done: 805, wall_bounces: 2388, image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500" },
-        { id: 10, color: "crimson", name: "Crimson", wins: 5, losses: 12, draws: 1, power_ups: 400, damage_done: 774, wall_bounces: 2185, image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500" },
-        { id: 11, color: "cerulean", name: "Cerulean", wins: 8, losses: 7, draws: 3, power_ups: 382, damage_done: 784, wall_bounces: 2091, image: "https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500" },
-        { id: 12, color: "emerald", name: "Emerald", wins: 11, losses: 7, draws: 0, power_ups: 529, damage_done: 830, wall_bounces: 2574, image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500" },
-        { id: 13, color: "goldenrod", name: "Goldenrod", wins: 9, losses: 9, draws: 0, power_ups: 441, damage_done: 861, wall_bounces: 2500, image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500" },
-        { id: 14, color: "diamond", name: "Diamond", wins: 4, losses: 14, draws: 0, power_ups: 407, damage_done: 827, wall_bounces: 2376, image: "https://docs.google.com/drawings/d/e/2PACX-1vTwIEKDfpQJqOzx562jQRB1VHpHkcJKoTdodLni9ktC4cbJw11LcgjwsymNy49METDwq6R2WC3HBBrs/pub?w=1500&h=1500" },
-        { id: 15, color: "coral", name: "Coral", wins: 8, losses: 10, draws: 0, power_ups: 432, damage_done: 776, wall_bounces: 2242, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500" },
-        { id: 16, color: "olive", name: "Olive", wins: 11, losses: 7, draws: 0, power_ups: 422, damage_done: 804, wall_bounces: 2343, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" },
-        { id: 17, color: "navy", name: "Navy", wins: 9, losses: 8, draws: 1, power_ups: 406, damage_done: 767, wall_bounces: 2233, image: "https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500" },
-        { id: 18, color: "teal", name: "Teal", wins: 14, losses: 4, draws: 0, power_ups: 512, damage_done: 814, wall_bounces: 2627, image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500" },
-        { id: 19, color: "indigo", name: "Indigo", wins: 10, losses: 8, draws: 0, power_ups: 429, damage_done: 760, wall_bounces: 2131, image: "https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500" },
-        { id: 20, color: "tan", name: "Tan", wins: 10, losses: 7, draws: 1, power_ups: 414, damage_done: 738, wall_bounces: 2199, image: "https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500" }
-          ]
+        { id: 1, color: "red", name: "Red", wins: 13, losses: 7, draws: 0, power_ups: 514, damage_done: 875, wall_bounces: 2714, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
+        { id: 2, color: "blue", name: "Blue", wins: 8, losses: 12, draws: 0, power_ups: 477, damage_done: 914, wall_bounces: 2603, image: "https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500" },
+        { id: 3, color: "green", name: "Green", wins: 9, losses: 11, draws: 0, power_ups: 488, damage_done: 911, wall_bounces: 2645, image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500" },
+        { id: 4, color: "yellow", name: "Yellow", wins: 10, losses: 10, draws: 0, power_ups: 519, damage_done: 953, wall_bounces: 2810, image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500" },
+        { id: 5, color: "purple", name: "Purple", wins: 7, losses: 12, draws: 1, power_ups: 522, damage_done: 909, wall_bounces: 2834, image: "https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500" },
+        { id: 6, color: "hot_pink", name: "Hot Pink", wins: 11, losses: 7, draws: 2, power_ups: 546, damage_done: 945, wall_bounces: 2912, image: "https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500" },
+        { id: 7, color: "cyan", name: "Cyan", wins: 9, losses: 11, draws: 0, power_ups: 554, damage_done: 891, wall_bounces: 3206, image: "https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500" },
+        { id: 8, color: "orange", name: "Orange", wins: 8, losses: 11, draws: 1, power_ups: 473, damage_done: 906, wall_bounces: 2584, image: "https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500" },
+        { id: 9, color: "arctic", name: "Arctic", wins: 8, losses: 12, draws: 0, power_ups: 505, damage_done: 948, wall_bounces: 2706, image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500" },
+        { id: 10, color: "crimson", name: "Crimson", wins: 5, losses: 14, draws: 1, power_ups: 475, damage_done: 902, wall_bounces: 2571, image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500" },
+        { id: 11, color: "cerulean", name: "Cerulean", wins: 9, losses: 8, draws: 3, power_ups: 459, damage_done: 917, wall_bounces: 2505, image: "https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500" },
+        { id: 12, color: "emerald", name: "Emerald", wins: 13, losses: 7, draws: 0, power_ups: 598, damage_done: 980, wall_bounces: 2919, image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500" },
+        { id: 13, color: "goldenrod", name: "Goldenrod", wins: 11, losses: 9, draws: 0, power_ups: 528, damage_done: 1007, wall_bounces: 2892, image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500" },
+        { id: 14, color: "diamond", name: "Diamond", wins: 6, losses: 14, draws: 0, power_ups: 487, damage_done: 982, wall_bounces: 2786, image: "https://docs.google.com/drawings/d/e/2PACX-1vTwIEKDfpQJqOzx562jQRB1VHpHkcJKoTdodLni9ktC4cbJw11LcgjwsymNy49METDwq6R2WC3HBBrs/pub?w=1500&h=1500" },
+        { id: 15, color: "coral", name: "Coral", wins: 8, losses: 12, draws: 0, power_ups: 494, damage_done: 886, wall_bounces: 2587, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbducBA_Enj_BCwFoMJ2e8Ww5xjphDDcdvn1aiORFS_gHqN7GR6dLRu2s_cg4Ni7a3cpyE742COvCI/pub?w=1500&h=1500" },
+        { id: 16, color: "olive", name: "Olive", wins: 11, losses: 9, draws: 0, power_ups: 510, damage_done: 941, wall_bounces: 2718, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" },
+        { id: 17, color: "navy", name: "Navy", wins: 11, losses: 8, draws: 1, power_ups: 445, damage_done: 912, wall_bounces: 2519, image: "https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500" },
+        { id: 18, color: "teal", name: "Teal", wins: 16, losses: 4, draws: 0, power_ups: 584, damage_done: 954, wall_bounces: 3024, image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500" },
+        { id: 19, color: "indigo", name: "Indigo", wins: 11, losses: 9, draws: 0, power_ups: 491, damage_done: 899, wall_bounces: 2491, image: "https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500" },
+        { id: 20, color: "tan", name: "Tan", wins: 11, losses: 8, draws: 1, power_ups: 457, damage_done: 822, wall_bounces: 2429, image: "https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500" }
+      ]
+    },
+    [season4]: {
+      squares: [
+        { id: 1, color: "red", name: "Red", wins: 7, losses: 8, draws: 1, power_ups: 783, damage_done: 391, wall_bounces: 2214, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
+        { id: 2, color: "blue", name: "Blue", wins: 11, losses: 5, draws: 0, power_ups: 740, damage_done: 431, wall_bounces: 2264, image: "https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500" },
+        { id: 3, color: "green", name: "Green", wins: 6, losses: 10, draws: 0, power_ups: 767, damage_done: 399, wall_bounces: 2147, image: "https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500" },
+        { id: 4, color: "yellow", name: "Yellow", wins: 8, losses: 8, draws: 0, power_ups: 745, damage_done: 472, wall_bounces: 2479, image: "https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500" },
+        { id: 5, color: "purple", name: "Purple", wins: 7, losses: 8, draws: 1, power_ups: 722, damage_done: 427, wall_bounces: 2305, image: "https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500" },
+        { id: 6, color: "orange", name: "Orange", wins: 5, losses: 11, draws: 0, power_ups: 746, damage_done: 422, wall_bounces: 2186, image: "https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500" },
+        { id: 7, color: "teal", name: "Teal", wins: 10, losses: 5, draws: 1, power_ups: 762, damage_done: 444, wall_bounces: 2329, image: "https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500" },
+        { id: 8, color: "arctic", name: "Arctic", wins: 11, losses: 5, draws: 0, power_ups: 747, damage_done: 462, wall_bounces: 2244, image: "https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500" },
+        { id: 9, color: "emerald", name: "Emerald", wins: 8, losses: 8, draws: 0, power_ups: 766, damage_done: 420, wall_bounces: 2236, image: "https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500" },
+        { id: 10, color: "hot_pink", name: "Hot Pink", wins: 11, losses: 4, draws: 1, power_ups: 762, damage_done: 423, wall_bounces: 2189, image: "https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500" },
+        { id: 11, color: "navy", name: "Navy", wins: 6, losses: 9, draws: 1, power_ups: 767, damage_done: 400, wall_bounces: 2211, image: "https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500" },
+        { id: 12, color: "tan", name: "Tan", wins: 7, losses: 9, draws: 0, power_ups: 756, damage_done: 407, wall_bounces: 2189, image: "https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500" },
+        { id: 13, color: "goldenrod", name: "Goldenrod", wins: 7, losses: 9, draws: 0, power_ups: 732, damage_done: 364, wall_bounces: 2099, image: "https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500" },
+        { id: 14, color: "olive", name: "Olive", wins: 7, losses: 9, draws: 0, power_ups: 761, damage_done: 433, wall_bounces: 2149, image: "https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500" },
+        { id: 15, color: "indigo", name: "Indigo", wins: 9, losses: 6, draws: 1, power_ups: 788, damage_done: 442, wall_bounces: 2234, image: "https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500" },
+        { id: 16, color: "cerulean", name: "Cerulean", wins: 10, losses: 6, draws: 0, power_ups: 755, damage_done: 375, wall_bounces: 2065, image: "https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500" },
+        { id: 17, color: "cyan", name: "Cyan", wins: 9, losses: 7, draws: 0, power_ups: 781, damage_done: 488, wall_bounces: 2287, image: "https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500" },
+        { id: 18, color: "crimson", name: "Crimson", wins: 6, losses: 10, draws: 0, power_ups: 743, damage_done: 414, wall_bounces: 2315, image: "https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500" },
+        { id: 19, color: "lavender", name: "Lavender", wins: 8, losses: 8, draws: 0, power_ups: 716, damage_done: 381, wall_bounces: 2128, image: "https://docs.google.com/drawings/d/e/2PACX-1vQbWFcT-_ZlPtZMqBztDu_uZtQx8-s2CxJxYDckJZoQabHCkTxpksRqrWWqr0AUzysuB-4qflKif2Zi/pub?w=1500&h=1500" },
+        { id: 20, color: "brown", name: "Brown", wins: 10, losses: 6, draws: 0, power_ups: 751, damage_done: 436, wall_bounces: 2238, image: "https://docs.google.com/drawings/d/e/2PACX-1vQArNNrt4MD6Ci5D_5OIHjw1d5XywBbzFnDoPA2s2B0OjGYa5trSycW-qzW8szr4P1-6fD-tPYyy2uG/pub?w=1500&h=1500" },
+        { id: 21, color: "malachite", name: "Malachite", wins: 5, losses: 10, draws: 1, power_ups: 718, damage_done: 362, wall_bounces: 2169, image: "https://docs.google.com/drawings/d/e/2PACX-1vSYONY3TZKNVNwiSF_SO_UQ6jv6LVPGCdRGHOuB85GaxjoNSp-lqQUkhsyby6qwP-hLO_uQWXNNFDVq/pub?w=1500&h=1500" },
+        { id: 22, color: "cream", name: "Cream", wins: 8, losses: 8, draws: 0, power_ups: 726, damage_done: 382, wall_bounces: 2201, image: "https://docs.google.com/drawings/d/e/2PACX-1vTVhmqUzUAH-Lp6IxgfrtlaC2STEozbH-qmQOaXV_nChF7EEB25IVhlWJbGpgkHaZ-dDF2B0WPKxyQn/pub?w=1500&h=1500" },
+        { id: 23, color: "blurple", name: "Blurple", wins: 4, losses: 12, draws: 0, power_ups: 737, damage_done: 383, wall_bounces: 2249, image: "https://docs.google.com/drawings/d/e/2PACX-1vSslJokrF3i_CiyHvjK0O0QkepHFDvZWrb-XbtKIwzEPt4t26b-zGII4zYmXyLGDDhzqEuVI6GOmGu8/pub?w=1500&h=1500" },
+        { id: 24, color: "blaze", name: "Blaze", wins: 8, losses: 7, draws: 1, power_ups: 690, damage_done: 372, wall_bounces: 2179, image: "https://docs.google.com/drawings/d/e/2PACX-1vS7CUjqAeRTBiG2VC6syGwPmwiFNy6bzv8tvwi0TOHt_QnyHMrCOYyX_HIXKE3WrOw89r2KvHkoy_bj/pub?w=1500&h=1500" }
+      ]
     }
   };
   const [selectedWeekNumber, setSelectedWeekNumber] = useState(3);
   const [showWeekDropdown, setShowWeekDropdown] = useState(false);
   const [showSquareProfile, setShowSquareProfile] = useState(false);
-  const seasons = [season1, season2, season3];
+  const seasons = [season1, season2, season3, season4];
   const colors = ["all", "red", "blue", "green", "yellow", "purple", "hot_pink", "cyan", "orange", "arctic", "crimson", "cerulean", "emerald", "goldenrod", "diamond", "navy", "coral", "olive", "teal", "indigo", "tan"];
   const squares = [
     { id: 1, color: "red", name: "Red", wins: 9, losses: 6, draws: 0, power_ups: 310, damage_done: 550, wall_bounces: 1522, image: "https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500" },
@@ -507,7 +640,7 @@ const App: React.FC = () => {
         <div className="flex items-center space-x-8">
           <h1 className="text-2xl font-bold text-gray-800">Square League</h1>
           <div className="flex space-x-6">
-            {["home", "standings", "schedule", "stats", "awards", "donors"].map(
+            {["home", "standings", "schedule", "stats", "awards", "donors", "livestream"].map(
               (page) => (
                 <button
                   key={page}
@@ -873,6 +1006,121 @@ const App: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+    );
+  };
+
+  const [betters, setBetters] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(String);
+
+  useEffect(() => {
+    fetchBetters();
+  }, []);
+
+  const fetchBetters = async () => {
+    try {
+      setLoading(true);
+      setError("failed fetching users");
+
+      const response = await fetch('http://127.0.0.1:5000/get_bet_data');
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setBetters(data);
+    } catch (err) {
+      setError("Error fetching users");
+      console.error('Error fetching users:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const renderBetters = () => {
+    if (loading) {
+      return (
+        <div className="flex items-center justify-center p-12">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        </div>
+      );
+    }
+
+    if (error) {
+      return (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+          <p className="text-red-700 font-medium">AllThingsShape is not live</p>
+        </div>
+      );
+    }
+
+    if (betters.length === 0) {
+      return (
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+          <p className="text-gray-600">No betters found</p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="overflow-x-auto">
+        <table className="w-full bg-white rounded-lg overflow-hidden shadow-lg">
+          <thead className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+            <tr>
+              <th className="px-6 py-4 text-left font-semibold">Rank</th>
+              <th className="px-6 py-4 text-left font-semibold">Name</th>
+              <th className="px-6 py-4 text-right font-semibold">Balance</th>
+              <th className="px-6 py-4 text-center font-semibold">Bets Placed</th>
+              <th className="px-6 py-4 text-center font-semibold">Bonus Claimed</th>
+              <th className="px-6 py-4 text-center font-semibold">Member</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200">
+            {betters
+              .sort((a, b) => b.balance - a.balance)
+              .map((better, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-gray-50 transition-colors duration-150"
+                >
+                  <td className="px-6 py-4">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 font-bold text-gray-700">
+                      {index + 1}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    {better.name}
+                  </td>
+                  <td className="px-6 py-4 text-right">
+                    <span className="text-lg font-bold text-green-600">
+                      ${better.balance}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-center text-gray-700">
+                    {better.betsPlaced}
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${better.bonusClaimed
+                      ? 'bg-green-100 text-green-700'
+                      : 'bg-red-100 text-red-700'
+                      }`}>
+                      {better.bonusClaimed ? 'Yes' : 'No'}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${better.isMember
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'bg-gray-100 text-gray-700'
+                      }`}>
+                      {better.isMember ? 'Member' : 'Non-member'}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
       </div>
     );
   };
@@ -1355,6 +1603,16 @@ const App: React.FC = () => {
           >
             <h2 className="text-3xl font-bold mb-8">Our Generous Donors</h2>
             {renderDonors()}
+          </div>
+        );
+      case "livestream":
+        return (
+          <div
+            className={`pt-24 px-6 max-w-7xl mx-auto min-h-screen transition-opacity duration-300 ${isContentTransitioning ? "opacity-0" : "opacity-100"
+              }`}
+          >
+            <h2 className="text-3xl font-bold mb-8">User Balances</h2>
+            {renderBetters()}
           </div>
         );
       case "standings":
