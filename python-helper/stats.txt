@@ -1,24 +1,24 @@
-red	Red	7	8	1	783	391	2214	https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500
-blue	Blue	11	5	0	740	431	2264	https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500
-green	Green	6	10	0	767	399	2147	https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500
-yellow	Yellow	8	8	0	745	472	2479	https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500
-purple	Purple	7	8	1	722	427	2305	https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500
-orange	Orange	5	11	0	746	422	2186	https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500
-teal	Teal	10	5	1	762	444	2329	https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500
-arctic	Arctic	11	5	0	747	462	2244	https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500
-emerald	Emerald	8	8	0	766	420	2236	https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500
-hot_pink	Hot Pink	11	4	1	762	423	2189	https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500
-navy	Navy	6	9	1	767	400	2211	https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500
-tan	Tan	7	9	0	756	407	2189	https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500
-goldenrod	Goldenrod	7	9	0	732	364	2099	https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500
-olive	Olive	7	9	0	761	433	2149	https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500
-indigo	Indigo	9	6	1	788	442	2234	https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500
-cerulean	Cerulean	10	6	0	755	375	2065	https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500
-cyan	Cyan	9	7	0	781	488	2287	https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500
-crimson	Crimson	6	10	0	743	414	2315	https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500
-lavender	Lavender	8	8	0	716	381	2128	https://docs.google.com/drawings/d/e/2PACX-1vQbWFcT-_ZlPtZMqBztDu_uZtQx8-s2CxJxYDckJZoQabHCkTxpksRqrWWqr0AUzysuB-4qflKif2Zi/pub?w=1500&h=1500
-brown	Brown	10	6	0	751	436	2238	https://docs.google.com/drawings/d/e/2PACX-1vQArNNrt4MD6Ci5D_5OIHjw1d5XywBbzFnDoPA2s2B0OjGYa5trSycW-qzW8szr4P1-6fD-tPYyy2uG/pub?w=1500&h=1500
-malachite	Malachite	5	10	1	718	362	2169	https://docs.google.com/drawings/d/e/2PACX-1vSYONY3TZKNVNwiSF_SO_UQ6jv6LVPGCdRGHOuB85GaxjoNSp-lqQUkhsyby6qwP-hLO_uQWXNNFDVq/pub?w=1500&h=1500
-cream	Cream	8	8	0	726	382	2201	https://docs.google.com/drawings/d/e/2PACX-1vTVhmqUzUAH-Lp6IxgfrtlaC2STEozbH-qmQOaXV_nChF7EEB25IVhlWJbGpgkHaZ-dDF2B0WPKxyQn/pub?w=1500&h=1500
-blurple	Blurple	4	12	0	737	383	2249	https://docs.google.com/drawings/d/e/2PACX-1vSslJokrF3i_CiyHvjK0O0QkepHFDvZWrb-XbtKIwzEPt4t26b-zGII4zYmXyLGDDhzqEuVI6GOmGu8/pub?w=1500&h=1500
-blaze	Blaze	8	7	1	690	372	2179	https://docs.google.com/drawings/d/e/2PACX-1vS7CUjqAeRTBiG2VC6syGwPmwiFNy6bzv8tvwi0TOHt_QnyHMrCOYyX_HIXKE3WrOw89r2KvHkoy_bj/pub?w=1500&h=1500
+red	Red	11	12	1	504	1020	3090	WLLWL	https://docs.google.com/drawings/d/e/2PACX-1vTc2C286DHcGfC_czwyyZlEX-oWNFd7fDhc2LrbTrEyQgHYhK-MfNT821xsGg69h9MB2lSEiplNyKzr/pub?w=1500&h=1500
+blue	Blue	17	7	0	561	977	3140	LWWWW	https://docs.google.com/drawings/d/e/2PACX-1vSsaPN03rGs7PGXG9xTw-2f8pZ244MIRSTQraWvHPvQYlymKBDiyVeYS1HCDiSRgfma2pTqY-ZZrjnn/pub?w=1500&h=1500
+green	Green	10	14	0	492	992	2883	WLWLW	https://docs.google.com/drawings/d/e/2PACX-1vRBDNIxSyjWmPTeqDWfYJt2vgg3lMIzlI1NwRWHYhv0kRdOAYToxthvUxBTNtTutO4pwrbHe3uPxE9-/pub?w=1500&h=1500
+yellow	Yellow	10	13	1	589	980	3386	LDLWW	https://docs.google.com/drawings/d/e/2PACX-1vREnIoNxanMIqNNa97QvURbVm6lesZVxvq-awFhaZb0q608Yon95qTM8BHHReB8hryih7kVEx-i4kTj/pub?w=1500&h=1500
+purple	Purple	10	13	1	550	949	3155	WLLLL	https://docs.google.com/drawings/d/e/2PACX-1vRyYszxA7ij21DNmKRGIvyvBWxJ68V8_B0LAFiLszo6NyaRWdfYggCrbMDrwoJrFI0qEBn4jKvIKidN/pub?w=1500&h=1500
+orange	Orange	10	13	1	565	988	3052	WWLWL	https://docs.google.com/drawings/d/e/2PACX-1vT5u4pAKWj6yg0XmzqHLlL1vRibnYNYolMZwZk8a6bKQOXU0UAgCiSvkK23St_60VkGu01oAhMlSMNT/pub?w=1500&h=1500
+teal	Teal	11	11	2	564	1001	3288	DLWLL	https://docs.google.com/drawings/d/e/2PACX-1vSxyKt3BBFxgp2rO9JoCyywMO3ZjHBGreXk4aLjjgZwEtsjfBSuhhBD31Ctx7_FWYK-3Go4IwHcPLho/pub?w=1500&h=1500
+arctic	Arctic	15	9	0	573	980	2994	LLWWW	https://docs.google.com/drawings/d/e/2PACX-1vTyYJ8Hg0GP4PbaTlJJY6dvmjclMrEX9G3EFgctOHOwO_pYHobBpRfrAoNOQs9wf3NRwcHe_1C0_qqO/pub?w=1500&h=1500
+emerald	Emerald	11	13	0	545	999	3141	WLLLL	https://docs.google.com/drawings/d/e/2PACX-1vRbLwinQ8ahVv3OGlXzrEkdMbaIDZf_eLltw8YpEq3yHm0HpJR6uxm4KyINR0cV8dQDXdxs2EcWfdK2/pub?w=1500&h=1500
+hot_pink	Hot Pink	15	7	2	533	1001	3085	LWWDL	https://docs.google.com/drawings/d/e/2PACX-1vRjCF0SICdWi0Z4hf54U6M19P-5t7BTlCDQwQXYVeE79rH1yumBW0UiP3bL8qMuPppxZ84iUwlHqQsA/pub?w=1500&h=1500
+navy	Navy	10	12	2	544	1008	3015	DWWLL	https://docs.google.com/drawings/d/e/2PACX-1vQgfmkSvE4l86IUnoTlw74lqOJHAMQFCNB3aUvSrv9aQEgRJJHFSnVOVyEhK9FImPgwyjSrP3isEeyq/pub?w=1500&h=1500
+tan	Tan	13	11	0	508	991	3013	WWLLW	https://docs.google.com/drawings/d/e/2PACX-1vS3F3SuNL4lWFNZEk26R1JCGncX8n3OHBSNSqHFWOaqHlQR5ZoBkDghSDDxZ6nw1bevyQsMIs6Oupso/pub?w=1500&h=1500
+goldenrod	Goldenrod	8	15	1	503	986	3157	LDLLL	https://docs.google.com/drawings/d/e/2PACX-1vTHsaByxlGzycaF8E1vCkoTBUjpg9S0z_c94UTLx5crz6BBOryMVJWMFJqeyDhhNIL9rBZhVwXmZXrc/pub?w=1500&h=1500
+olive	Olive	10	14	0	560	988	3010	LLLLW	https://docs.google.com/drawings/d/e/2PACX-1vRCGsClW8b5VReXMmoMkYbInPAhhTLDa3FZ8XVtVMj5gPWVB88--lbIHqLjEnkdn44tC-ME5D5H3DtN/pub?w=1500&h=1500
+indigo	Indigo	13	10	1	550	1039	2917	WLLLW	https://docs.google.com/drawings/d/e/2PACX-1vSVQ47ut4IDgMSXXw0y3GZ02If5JwZJSDn_AbU3fC5756E5RBoHjSqDsCv8RPT5Tnu7WLPeNk6lq1rZ/pub?w=1500&h=1500
+cerulean	Cerulean	13	11	0	472	990	2863	LLWLL	https://docs.google.com/drawings/d/e/2PACX-1vRAkxvHOfwQzadYbbhXZTS17_fau8ibD4DBZR6MtEjcMvw8sbTGpnl3uZWb864HHpV0MIyruXVx1Y4l/pub?w=1500&h=1500
+cyan	Cyan	13	11	0	601	1014	3252	WWLLW	https://docs.google.com/drawings/d/e/2PACX-1vS68NgAs3PWllP4Py9vS_Y0ANxvtvpkp3iIzBkgKLegtzei_NTMU_VIaB5G60qADiDiulqJbaU2l6AY/pub?w=1500&h=1500
+crimson	Crimson	9	15	0	518	975	3033	WLLWW	https://docs.google.com/drawings/d/e/2PACX-1vQo89c923T011Exxd5CZTXxX09kwRgd9TwTJG_8FsRv6FwVUIsrD-ezVywX6mjHtQAFA7VNPOniXKym/pub?w=1500&h=1500
+lavender	Lavender	13	11	0	470	942	2866	LWWWW	https://docs.google.com/drawings/d/e/2PACX-1vQbWFcT-_ZlPtZMqBztDu_uZtQx8-s2CxJxYDckJZoQabHCkTxpksRqrWWqr0AUzysuB-4qflKif2Zi/pub?w=1500&h=1500
+brown	Brown	15	9	0	548	1000	3074	LWWWL	https://docs.google.com/drawings/d/e/2PACX-1vQArNNrt4MD6Ci5D_5OIHjw1d5XywBbzFnDoPA2s2B0OjGYa5trSycW-qzW8szr4P1-6fD-tPYyy2uG/pub?w=1500&h=1500
+malachite	Malachite	9	12	3	468	955	2928	LDWWL	https://docs.google.com/drawings/d/e/2PACX-1vSYONY3TZKNVNwiSF_SO_UQ6jv6LVPGCdRGHOuB85GaxjoNSp-lqQUkhsyby6qwP-hLO_uQWXNNFDVq/pub?w=1500&h=1500
+cream	Cream	12	12	0	509	956	3091	WWWWL	https://docs.google.com/drawings/d/e/2PACX-1vTVhmqUzUAH-Lp6IxgfrtlaC2STEozbH-qmQOaXV_nChF7EEB25IVhlWJbGpgkHaZ-dDF2B0WPKxyQn/pub?w=1500&h=1500
+blurple	Blurple	9	14	1	483	973	3036	WWWDW	https://docs.google.com/drawings/d/e/2PACX-1vSslJokrF3i_CiyHvjK0O0QkepHFDvZWrb-XbtKIwzEPt4t26b-zGII4zYmXyLGDDhzqEuVI6GOmGu8/pub?w=1500&h=1500
+blaze	Blaze	12	10	2	512	926	3143	LDLWW	https://docs.google.com/drawings/d/e/2PACX-1vS7CUjqAeRTBiG2VC6syGwPmwiFNy6bzv8tvwi0TOHt_QnyHMrCOYyX_HIXKE3WrOw89r2KvHkoy_bj/pub?w=1500&h=1500
